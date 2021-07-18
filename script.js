@@ -46,6 +46,7 @@ async function getMovieRecommendations(url) {
   similarHeading.classList.remove("hide");
   similarHeading.innerText = `Similar Movies to '${searchTerm}'`
   trendingHeading.classList.add("hide")
+  console.log(data.results)
   showMovies(data.results);
 }
 
@@ -78,8 +79,14 @@ function showMovies(movies) {
                 )}">${vote_average}</span>
             </div>
             <div class="overview">
-                <h3>Overview</h3>
-                ${overview}
+                <div class="overview-header">
+                  <h3>Overview</h3>
+                  <span class="${getClassByRate(
+                    vote_average
+                  )}">${vote_average}</span>
+                </div>
+                <p>${overview}</p>
+                
         </div>
         `;
     main.appendChild(movieEl);
