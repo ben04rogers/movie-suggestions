@@ -32,7 +32,7 @@ header {
   justify-content: center;
   align-items: center;
   color: white;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
   padding: 0 1rem;
 }
@@ -82,6 +82,10 @@ form {
 
 .searchButton:hover {
   cursor: pointer;
+}
+
+#similar-heading {
+  text-align: center;
 }
 
 main {
