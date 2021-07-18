@@ -10,6 +10,9 @@ const searchInput = document.getElementById("search");
 const main = document.getElementById("main");
 const similarHeading = document.getElementById("similar-heading");
 const trendingHeading = document.getElementById("trending-heading");
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
 let searchMovieId;
 let searchTerm = "";
 
@@ -31,7 +34,8 @@ async function getMovieID(url) {
     RECOMMEND_URL = `https://api.themoviedb.org/3/movie/${searchMovieId}/recommendations?api_key=c2bcb395bf82a18ed17b1f09b9e1e472&language=en-US&page=1`;
     getMovieRecommendations(RECOMMEND_URL);
   } else {
-    window.location.reload();
+    modal.style.display = "block";
+    trendingHeading.innerText = "Oops, there was an error"
   }
   
 }
@@ -92,3 +96,15 @@ function getClassByRate(vote) {
   }
 }
 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  window.location.reload();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
