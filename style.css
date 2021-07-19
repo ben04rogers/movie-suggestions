@@ -69,7 +69,7 @@ form {
   right: 0;
   height: 100%;
   border-radius: 50%;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,22 +121,26 @@ main {
   margin-top: 0;
 }
 
-.movie-info span, .overview-header span {
+.movie-info span,
+.overview-header span {
   background-color: var(--primary-color);
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
   font-weight: bold;
 }
 
-.movie-info span.green, .overview-header span.green {
+.movie-info span.green,
+.overview-header span.green {
   color: lightgreen;
 }
 
-.movie-info span.orange, .overview-header span.orange {
+.movie-info span.orange,
+.overview-header span.orange {
   color: orange;
 }
 
-.movie-info span.red, .overview-header span.red {
+.movie-info span.red,
+.overview-header span.red {
   color: red;
 }
 
@@ -184,8 +188,8 @@ main {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -197,7 +201,7 @@ main {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 /* The Close Button */
@@ -213,4 +217,12 @@ main {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+footer {
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 3rem;
 }
